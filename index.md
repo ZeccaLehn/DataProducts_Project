@@ -1,0 +1,101 @@
+---
+title       : Dynamic Probabilities
+subtitle    : Developing Data Products Project
+author      : Zecca Lehn (@Zecca_Lehn)
+job         : Coursera / Johns Hopkins ~ Data Science Certification
+framework   : io2012 # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : standalone # {standalone, selfcontained,draft}
+knit        : slidify::knit2slides
+---
+ 
+## The Shiny App 
+
+1. Explore complex statistical relationships.
+2. Find probability of non-normal points.
+3. Uncover lost dynamics behind statistics.
+
+![APicture](./assets/fig/normal0I.png)
+
+--- .class #id 
+
+
+### Should We Disregard Skew?
+
+![Image](http://lowres.cartoonstock.com/travel-tourism-tower-pisa-leaning_tower-leaning_tower_of_pisa-pizzas-tzun169_low.jpg)
+
+
+<!-- Limit image width and height 
+Source: http://stackoverflow.com/questions/16904054/slidify-how-to-position-an-image/18640582#18640582 -->
+<style type="text/css">
+img {    
+  max-height: 560px;    
+  max-width: 964px;
+}
+</style>
+ 
+<!-- Center image on slide -->
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+$(function() {    
+  $("p:has(img)").addClass('centered');
+});
+</script>
+
+--- 
+
+
+### Distributions Share Random Points
+
+- Change features of Kernel / Normal
+- Notice, area under curve is not always exactly 1.
+- Change `Probability` range, for area of each linked distribution.
+- `Tau` skews distribution, and gives different probabilities.
+
+![APicture](./assets/fig/tau0I.png)
+
+---
+ 
+
+### From Normal to Skew: Streched by `rexp()`
+
+```r
+tau <- 3; n <- 1000; x <- sort(rnorm(n)); y <- x +  rexp(x, 1/(tau)) 
+```
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+
+---
+### 
+
+![Image](http://www.farmingtonbaseball.info/sitebuildercontent/sitebuilderpictures/webassets/thank-you-animated.gif)
+
+
+<!-- Limit image width and height 
+Source: http://stackoverflow.com/questions/16904054/slidify-how-to-position-an-image/18640582#18640582 -->
+<style type="text/css">
+img {    
+  max-height: 560px;    
+  max-width: 964px;
+}
+</style>
+ 
+<!-- Center image on slide -->
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+$(function() {    
+  $("p:has(img)").addClass('centered');
+});
+</script>
+
+
+[Dynamic Probabilities (Shiny App)](http://webapptester.shinyapps.io/Dynamic_Probabilities)
+
+GitHub Sources: [Zecca Lehn](https://github.com/ZeccaLehn)
+
+
+
+
+
