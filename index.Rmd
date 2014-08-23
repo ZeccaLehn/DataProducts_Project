@@ -100,7 +100,7 @@ $(function() {
 
 [Dynamic Probabilities (Shiny App)](http://webapptester.shinyapps.io/Dynamic_Probabilities)
 
-GitHub Sources: [Zecca Lehn](https://github.com/ZeccaLehn)
+GitHub Sources: [Zecca Lehn](https://github.com/ZeccaLehn/DataProducts_Project)
 
 
 
